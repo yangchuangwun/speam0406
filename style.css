@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins,sans-serif";
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://picsum.photos/seed/{001}picsum/4096/2160) no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  font-size: 200%;
+}
+
+.navbar-brand {
+  font-size: 150%;
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: white;
+  color: grey;
+}
+
+.sodo {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.wrapper {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  /* 模糊度 */
+  backdrop-filter: blur(40px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s, height 0.2s ease;
+}
+
+/* 改變彈出視窗大小 */
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+/* 點擊後視窗高度 */
+.wrapper.active {
+  height: 600px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+/* 隱藏登入菜單 點選創建後會跑到左邊*/
+.wrapper .form-box.login {
+  transition: transform 1s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(600px);
+}
+
+/* 創建視窗 */
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translate(600px, -400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 1s ease;
+  transform: translateY(-400px);
+}
+
+/* X的按鈕 */
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: aquamarine;
+  text-align: center;
+}
+
+/* 輸入框內的底線顏色等等的 */
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #dbdddf;
+  margin: 30px 0;
+}
+
+/* 輸入框內的文字顏色 文字速度*/
+.input-box label {
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  transform: translate(-40%);
+  font-size: 1em;
+  color: #fdfeff;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #e3e5e6;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 5px;
+  font-size: 2.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+/* 記住勾選框 */
+.remember-fprgot {
+  font-size: 1em;
+  color: #d3d6d8;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-fprgot label input {
+  accent-color: #355872;
+  margin-right: 2px;
+}
+
+/* 忘記密碼的底線跟顏色 */
+.remember-fprgot a {
+  color: #b9c4cc;
+  text-decoration: none;
+}
+
+.remember-fprgot a:hover {
+  text-decoration: underline;
+}
+
+/* 登入按鈕樣式 */
+.btntoroku {
+  width: 100%;
+  height: 30px;
+  background: cornflowerblue;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btnregister {
+  width: 100%;
+  height: 30px;
+  background: cornflowerblue;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btnwasureta {
+  width: 100%;
+  height: 30px;
+  background: cornflowerblue;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* 沒有帳號自型 */
+.login-register {
+  font-size: 1.5em;
+  color: #c9d0d4;
+  text-align: center;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+/* 創建自型 */
+.login-register p a {
+  color: #0a121b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+/* 安裝按鈕的樣式 */
+.btnLogin-popup1 {
+  width: 150px;
+  height: 60px;
+  background: none;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+/* 安裝按鈕的背景 */
+.navigation .btnLogin-popup1:hover {
+  background: rgb(255, 255, 255);
+  color: grey;
+}
+
+/* ------------------------忘記密碼CSS---------------------- */
+.wasureta1 {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  /* 模糊度 */
+  backdrop-filter: blur(40px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s, height 0.2s ease;
+}
+
+/* 忘記密碼頁面的登入按鈕樣式 */
+.btntorokuforwasureta {
+  width: 100%;
+  height: 30px;
+  background: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}

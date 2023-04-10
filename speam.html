@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""><img src="./menu.png" style="width: 40px;" alt=""></span>
+              </button>
+          
+          <a class="navbar-brand" href="#" style="position: absolute; top:15%; left:45%" ><img src="./steam01.png">Speam</a>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="dowbtn">下載</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">商店</a>
+              </li>
+              <li class="nav-item" href="#">
+                <a class="nav-link disabled">客服</a>
+              </li>
+            </ul>
+                <button class="btnLogin-popup">登入</button>
+          </div>
+        </div>
+      </nav>
+
+    <!-- --------------------登入頁面---------------------------- -->
+    <div class="sodo">
+        <div class="wrapper">
+          <!-- 登入視窗的X -->
+            <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+            </span>
+            
+            <div class="form-box login">
+            <h2>登入</h2>
+            <form action="#">
+                <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" id="torokuEm" required />
+                <label>Email</label>
+                </div>
+                <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"> </ion-icon>
+                </span>
+                <input type="password" id="torokupassword" required />
+                
+                <label>Password</label>
+                </div>
+                <div class="remember-fprgot">
+                <label><input type="checkbox" /> 記住</label>
+                <a href="#" id="passwordwasureta">忘記密碼</a>
+                </div>
+                <button type="submit" class="btntoroku">登入</button>
+                <div class="login-register">
+                <p>沒有帳號?<a href="#" class="register-link">點我創建</a></p>
+                </div>
+            </form>
+            </div>
+    
+            <!-- ///////////////////註冊頁面////////////////// -->
+            <div class="form-box register">
+            <h2>註冊</h2>
+            <form action="#">
+                <div class="input-box">
+                <!-- 註冊的icon  -->
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <input type="text" id="Us" required />
+                <label>Username</label>
+                </div>
+                <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail-unread"></ion-icon>
+                </span>
+                <input type="email" id="Em" required />
+                <label>Email</label>
+                </div>
+                <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"> </ion-icon>
+                </span>
+                <input type="password" id="Ps" required />
+                <label>Password</label>
+                </div>
+                <!-- <div class="remember-fprgot">
+                <label><input type="checkbox" /> 我同意</label>
+                </div> -->
+                <button type="submit" class="btnregister">創建</button>
+                <div class="login-register">
+                <p>已經有帳號了?<a href="#" class="login-link">登入</a></p>
+                </div>
+            </form>
+            </div>
+        </div>
+
+</body>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  </body>
+</html>
